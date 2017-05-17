@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Пример CSS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <style>
+        .table-holder {
+            transform: translate(-50%, -50%) scaleY(0.5);
+            position: absolute;
+            left: 50%;
+            top: calc(50% + 120px);
+        }
+        
+        .table {
+            display: table;
+            border-spacing: 5px;
+            transform: rotate(45deg);
+        }
+        
+        .table .row {
+            display: table-row;
+        }
+        
+        .table .cell {
+            display: table-cell;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .person {
+            margin: 50px auto 0px;
+            width: 408px;
+            height: 104px;
+            background-image: url('./pictures/person.png');
+        }
+        
+        .person_animation {
+            animation: play 0.5s steps(6) infinite;
+            width: 68px;
+            height: 104px;
+            position: absolute;
+            left: calc(50% - 34px);
+            top: calc(50% - 52px);
+        }
+        
+        @keyframes play {
+            0% {
+                background-position: 0px 0;
+            }
+            100% {
+                background-position: -408px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-holder">
+        <div class="table">
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+            <div class="row">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="person"></div>
+    <div class="person person_animation"></div>
+</body>
+</html>
